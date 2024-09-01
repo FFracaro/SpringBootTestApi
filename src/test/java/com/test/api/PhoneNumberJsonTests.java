@@ -2,7 +2,7 @@ package com.test.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.autoconfigure.json.JsonTest;
 import org.springframework.boot.test.json.JacksonTester;
 import org.springframework.boot.test.json.JsonContent;
 
@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.IOException;
 
-@SpringBootTest
+@JsonTest
 public class PhoneNumberJsonTests {
 
     @Autowired
@@ -96,13 +96,13 @@ public class PhoneNumberJsonTests {
         String phoneNumber = """
             {
                 "valid": true,   
-                "local_format": "4158586273",
-                "intl_format": "+14158586273",
-                "country_code": "US",
-                "country_name": "United States of America",
+                "localFormat": "4158586273",
+                "intlFormat": "+14158586273",
+                "countryCode": "US",
+                "countryName": "United States of America",
                 "location": "Novato",
                 "carrier": "AT&T Mobility LLC",
-                "line_type": "mobile"
+                "lineType": "mobile"
             }
             """;
 
